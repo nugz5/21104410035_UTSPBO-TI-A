@@ -7,7 +7,7 @@ package com.mycompany.penyanyi;
 
 /**
  *
- * @author Nugroho Gusti Bintang Fajar - 21104410035
+ * @nugz5
  */
 public class Penyanyi extends Pop{
     public static void main(String[]args){
