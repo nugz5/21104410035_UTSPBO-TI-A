@@ -2,50 +2,40 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
  */
-
 package com.mycompany.mainenergi;
+/**
+ *
+ * @Nugz5
+ */
+import java.util.Scanner;
 
 /**
  *
- * @author Administrator
+ * @nugz5
  */
-import java.util.Scanner;
-public class MainEnergi {
+public class MainEnergi extends Kinetic {
     public static void main(String[] args) {
-        Kinetic massa = new Kinetic();
-        Kinetic kecepatan = new Kinetic();
         
-        System.out.println("Program Menghitung Energi Kinetik : ");
-        System.out.print("Masukkan massa benda : ");
-        Scanner masa = new Scanner(System.in);
-        massa.setMassaBenda(masa.nextDouble());
+        MainEnergi me = new MainEnergi();
+        Scanner input = new Scanner(System.in);
         
-        System.out.print("Masukkan kecepatan benda : ");
-        Scanner cepat = new Scanner(System.in);
-        kecepatan.setKecepatanBenda(cepat.nextDouble());
+        System.out.print("Masukkan kecepaan benda = ");
+        Double v = input.nextDouble();
+        me.setKecepatanBenda(v);
+        System.out.println();
         
-        System.out.println("Maka Energi Kinetic nya adalah : " + 0.5 * massa.getMassaBenda() * Math.pow(kecepatan.getKecepatanBenda(), 2));
-    }
-
-    private static class Kinetic {
-
-        public Kinetic() {
-        }
-
-        private void setMassaBenda(double nextDouble) {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-
-        private void setKecepatanBenda(double nextDouble) {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-
-        private double getMassaBenda() {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-
-        private double getKecepatanBenda() {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
+        System.out.print("Masukkan massa benda  = ");
+        Double m = input.nextDouble();
+        me.setMassaBenda(m);
+        System.out.println();
+        
+        Double ek = 0.5 * me.getMassaBenda() * me.kecepatanBenda * me.getKecepatanBenda();
+        me.setEk(ek);
+        
+        
+        System.out.println( "Jadi Hasilnya adalah " + me.getEk() + " Joule");
+        
+        
+        
     }
 }
