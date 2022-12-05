@@ -6,7 +6,7 @@ package com.mycompany.penyanyi;
 
 /**
  *
- * @author Administrator
+ * @nugz5
  */
 public class Dangdut {
     
